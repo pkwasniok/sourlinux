@@ -1,66 +1,91 @@
 # Sourlinux
 
-## Time and locales
+## Pre-installation
 
-1. Set font
+### Locales
 
-```
-setfont lat2-14
+1. Set console font
+
+```sh
+$ setfont lat2-14
 ```
 
 2. Generate locales
 
-```
-echo "en_US UTF-8" >> /etc/locale.gen
-echo "pl_PL UTF-8" >> /etc/locale.gen
-locale-gen
+```sh
+$ echo "en_US UTF-8" >> /etc/locale.gen
+$ echo "pl_PL UTF-8" >> /etc/locale.gen
+$ locale-gen
 ```
 
 3. Set locales
 
-```
-localectl --set-keymap pl
-localectl --set-locale LANG=en_US.UTF-8
-localectl --set-locale LC_TIME=pl_PL.UTF-8
-```
-
-4. Set timezone
-
-```
-timedatectl --set-timezone Europe/Warsaw
+```sh
+$ timedatectl set-keymap pl
+$ timedatectl set-locale LANG=en_US.UTF-8
+$ timedatectl set-locale LC_TIME=pl_PL.UTF-8
 ```
 
-5. Synchronize hardware clock
+### Internet
 
-```
-hwclock --systohc
-```
+Connect to the internet.
 
-## Disks and filesystems
+### Timezone
 
-### Layout
+1. Set timezone
 
-| # | Label  | Filesystem | Size    | Mountpoint |
-| - | ------ | ---------- | ------- | ---------- |
-| 1 | EFI    | FAT32      | 1 GiB   | `/boot`    |
-| 1 | SWAP   | SWAP       | 32 GiB  | `[swap]`   |
-| 2 | SYSTEM | BTRFS      | ~       | `/`        |
-
-### Formatting
-
-```
-mkfs.fat -F 32 /dev/[EFI]
+```sh
+$ timedatectl set-timezone Europe/Warsaw
 ```
 
-```
-mkswap /dev/[SWAP]
+2. Synchronize hardware clock
+
+```sh
+$ hwclock --systohc
 ```
 
+### Disks
+
+1. Partitions layout
+
+| # | Mount point | Type                  | Size   | Filesystem |
+| - | ----------- | --------------------- | ------ | ---------- |
+| 1 | `/boot`     | EFI partition (1)     | 1 GiB  | FAT32      |
+| 2 | ~           | Linux swap (19)       | 32 GiB | swap       |
+| 3 | ~           | Linux filesystem (20) | ~      | btrfs      |
+
+2. Subvolumes layout
+
+| # | Mount point | Name    |
+| - | ----------- | ------- |
+| 1 | `/`         | `@`     |
+| 2 | `/home`     | '@home' |
+
+3. Mounting
+
+```sh
+$ mount -o subvol=@ /dev/<Root partition> /mnt
 ```
-mkfs.btrfs /dev/[SYSTEM]
+
+```sh
+$ mkdir -p /mnt/home
+$ mount -o subvol=@home /dev/<Root partition> /mnt/home
+```
+
+```sh
+$ mkdir -p /mnt/boot
+$ mount /dev/<EFI partition> /mnt/boot
+```
+
+```sh
+$ swapon /dev/<Swap partition>
 ```
 
 ## Installation
+
+TBD
+
+## Post-installation
 
 TBD
 
