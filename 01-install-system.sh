@@ -25,7 +25,7 @@ pacstrap -K /mnt \
     networkmanager iptables bluez bluez-utils \
 
     # Filesystems
-    btrfs-progs dosfstools \
+    btrfs-progs e2fsprogs dosfstools exfatprogs \
 
     # Docs
     man-db man-page \
