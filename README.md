@@ -93,5 +93,48 @@ TBD
 
 ## Post-installation
 
-TBD
+1. Generate fstab
+
+```sh
+$ genfstab /mnt > /mnt/etc/fstab
+```
+
+2. Change root
+
+```sh
+$ arch-chroot /mnt
+```
+
+3. Install bootloader
+
+```sh
+$ bootctl install
+```
+
+```
+PRESETS=('default')
+
+default_kver='/boot/vmlinuz-linux'
+default_uki='/boot/arch-linux.efi'
+```
+
+```
+PRESETS=('fallback')
+
+fallback_kver='/boot/vmlinuz-linux-lts'
+fallback_uki='/boot/arch-linux-fallback.efi'
+```
+
+```
+root=UUID=[UUID] rootflags=subvol=@
+```
+
+```
+efibootmgr --create --label 'Arch Linux' --unicode --disk /dev/[efi part] --loader '\arch-linux.efi'
+efibootmgr --create --label 'Arch Linux (fallback)' --unicode --disk /dev/[efi part] --loader '\arch-linux-fallback.efi'
+efibootmgr --create --label 'Shell' --unicode --disk /dev/[efi part] --loader '\edk2-shell.efi'
+```
+
+
+
 
