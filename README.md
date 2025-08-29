@@ -56,10 +56,11 @@ $ hwclock --systohc
 
 2. Subvolumes layout
 
-| # | Mount point | Name    |
-| - | ----------- | ------- |
-| 1 | `/`         | `@`     |
-| 2 | `/home`     | '@home' |
+| # | Mount point        | Name     |
+| - | ------------------ | -------- |
+| 1 | `/`                | `@`      |
+| 2 | `/home`            | `@home`  |
+| 3 | `/usr/share/games` | `@games` |
 
 3. Mounting
 
@@ -70,6 +71,11 @@ $ mount -o subvol=@ /dev/<Root partition> /mnt
 ```sh
 $ mkdir -p /mnt/home
 $ mount -o subvol=@home /dev/<Root partition> /mnt/home
+```
+
+```sh
+$ mkdir -p /mnt/games
+$ mount -o subvol=@games /dev/<Root partition> /usr/share/games
 ```
 
 ```sh

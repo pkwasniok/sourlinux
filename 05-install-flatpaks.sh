@@ -34,6 +34,6 @@ flatpak install \
     com.github.johnfactotum.Foliate \ # Ebook
 
     # Others
-    net.nokyan.Resources \
-    flatpak install flathub se.sjoerd.Graphs \
+    io.missioncenter.MissionCenter \
+    se.sjoerd.Graphs
 
