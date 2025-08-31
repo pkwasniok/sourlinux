@@ -22,7 +22,7 @@ pacstrap -K /mnt \
     pacman-contrib reflector \
 
     # Networking
-    networkmanager iptables bluez bluez-utils \
+    networkmanager iptables bluez bluez-utils wireguard-tools \
 
     # Filesystems
     btrfs-progs e2fsprogs dosfstools exfatprogs \
