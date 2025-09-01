@@ -1,0 +1,5 @@
+PRESETS=('fallback')
+
+fallback_kver="/boot/vmlinuz-linux-lts"
+fallback_uki="/boot/arch-linux-fallback.efi"
+

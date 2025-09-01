@@ -1,0 +1,6 @@
+PRESETS=('default')
+
+default_kver="/boot/vmlinuz-linux"
+default_uki="/boot/arch-linux.efi"
+default_options="--splash=/usr/share/systemd/bootctl/splash-arch.bmp"
+
