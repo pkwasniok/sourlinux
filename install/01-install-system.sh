@@ -28,11 +28,11 @@ pacstrap -K /mnt \
     btrfs-progs e2fsprogs dosfstools exfatprogs \
 
     # Docs
-    man-db man-page \
+    man-db man-pages \
 
     # Runtimes
     docker docker-compose docker-buildx flatpak \
 
     # Others
-    cups tlp
+    cups tlp \
 
