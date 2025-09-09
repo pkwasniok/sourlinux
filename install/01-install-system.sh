@@ -16,7 +16,7 @@ pacstrap -K /mnt \
     gdb cmake \
 
     # Python
-    python ipython python-pip python-numpy python-matplotlib python-scipy \
+    python ipython python-pip python-numpy python-matplotlib python-scipy python-sympy \
 
     # Pacman extensions
     pacman-contrib reflector \
