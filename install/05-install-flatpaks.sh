@@ -27,10 +27,10 @@ flatpak install \
     org.gnome.font-viewer \
 
     # Viewers
+    org.gnome.Papers \
     org.gnome.Loupe \ # Image
     org.gnome.Totem \ # Video
     flathub org.gnome.Decibels \ # Audio
-    org.gnome.Evince \ # Document
     com.github.johnfactotum.Foliate \ # Ebook
 
     # Others
