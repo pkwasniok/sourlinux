@@ -32,6 +32,7 @@ flatpak install \
     org.gnome.Totem \ # Video
     flathub org.gnome.Decibels \ # Audio
     com.github.johnfactotum.Foliate \ # Ebook
+    flathub io.github.nokse22.Exhibit \ # 3D Models
 
     # Others
     io.missioncenter.MissionCenter \
