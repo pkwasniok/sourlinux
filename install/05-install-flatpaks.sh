@@ -15,12 +15,14 @@ flatpak install \
     org.inkscape.Inkscape \
     org.kicad.KiCad \
     org.onlyoffice.desktopeditors \
+    flathub org.audacityteam.Audacity \
 
     # Utilities
     org.gnome.Calendar \
     org.gnome.clocks \
     org.gnome.TextEditor \
     org.gnome.Calculator \
+    flathub com.github.wwmm.easyeffects \
 
     # Fonts
     org.gnome.Characters \
