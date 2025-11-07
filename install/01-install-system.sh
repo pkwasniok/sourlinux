@@ -16,13 +16,13 @@ pacstrap -K /mnt \
     gdb cmake \
 
     # Python
-    python ipython python-pip python-numpy python-matplotlib python-scipy python-sympy \
+    python ipython python-pip python-numpy python-matplotlib python-scipy python-sympy python-pandas \
 
     # Pacman extensions
     pacman-contrib reflector \
 
     # Networking
-    networkmanager iptables bluez bluez-utils wireguard-tools \
+    networkmanager inetutils iptables bluez bluez-utils wireguard-tools \
 
     # Filesystems
     btrfs-progs e2fsprogs dosfstools exfatprogs \
