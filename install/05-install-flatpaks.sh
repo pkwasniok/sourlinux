@@ -15,14 +15,14 @@ flatpak install \
     org.inkscape.Inkscape \
     org.kicad.KiCad \
     org.onlyoffice.desktopeditors \
-    flathub org.audacityteam.Audacity \
+    org.audacityteam.Audacity \
 
     # Utilities
     org.gnome.Calendar \
     org.gnome.clocks \
     org.gnome.TextEditor \
     org.gnome.Calculator \
-    flathub com.github.wwmm.easyeffects \
+    com.github.wwmm.easyeffects \
 
     # Fonts
     org.gnome.Characters \
@@ -32,11 +32,12 @@ flatpak install \
     org.gnome.Papers \
     org.gnome.Loupe \ # Image
     org.gnome.Totem \ # Video
-    flathub org.gnome.Decibels \ # Audio
+    org.gnome.Decibels \ # Audio
     com.github.johnfactotum.Foliate \ # Ebook
-    flathub io.github.nokse22.Exhibit \ # 3D Models
+    io.github.nokse22.Exhibit \ # 3D Models
 
     # Others
     io.missioncenter.MissionCenter \
-    se.sjoerd.Graphs
+    se.sjoerd.Graphs \
+    org.mozilla.Thunderbird \
 
