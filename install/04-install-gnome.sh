@@ -5,5 +5,5 @@ pacstrap -K /mnt \
     gnome-backgrounds gnome-console gnome-control-center gnome-tweaks \
 
     # Extras
-    firefox firefox-developer-edition \
+    firefox firefox-developer-edition wl-clipboard \
 
