@@ -31,7 +31,7 @@ flatpak install \
     # Viewers
     org.gnome.Papers \
     org.gnome.Loupe \ # Image
-    org.gnome.Totem \ # Video
+    org.gnome.Showtime \ # Video
     org.gnome.Decibels \ # Audio
     com.github.johnfactotum.Foliate \ # Ebook
     io.github.nokse22.Exhibit \ # 3D Models
