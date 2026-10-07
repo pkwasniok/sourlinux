@@ -1,3 +1,20 @@
+# sourlinux
+
+Documentation of my Arch Linux installation.
+
+## Installation
+
+1. Locale (console font, language, timestamp, synchronize hw clock)
+2. Formatting
+
+
+### Disk layout
+
+| Mount point | Description          |  Size | Filesystem |
+| ----------- | -------------------- |  ---- | ---------- |
+| /efi        | EFI system partition | 2 GiB | FAT32      |
+| /           | Root partition       | ~ GiB | btrfs      |
+
 # Sourlinux
 
 ## Pre-installation
