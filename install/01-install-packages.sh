@@ -46,7 +46,7 @@ PACKAGES+=("woff2-font-awesome" "ttc-iosevka")
 # Gnome
 PACKAGES+=("gdm" "gnome-shell" "gnome-keyring" "gnome-settings-daemon")
 PACKAGES+=("gnome-backgrounds" "gnome-control-center" "gnome-tweaks")
-PACKAGES+=("ghostty" "firefox" "wl-clipboard")
+PACKAGES+=("ptyxis" "firefox" "wl-clipboard")
 
 # Install packages
 pacstrap -K /mnt "${PACKAGES[@]}"
